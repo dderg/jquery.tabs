@@ -1,0 +1,28 @@
+{
+  "name": "jquery.tabs",
+  "version": "0.0.1",
+  "authors": [
+    "prog666 <gnomdan@yandex.ru>"
+  ],
+  "description": "simple tabs for jquery",
+  "main": "dist/tabs.js",
+  "keywords": [
+    "tabs",
+    "jquery"
+  ],
+  "license": "MIT",
+  "homepage": "github.com/prog666/jquery.tabs/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "gulpfile.coffee",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
