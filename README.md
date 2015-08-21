@@ -1,10 +1,17 @@
+# about
+
+[comment:](https://github.com/prog666/jquery.tabs/issues/1)
+> It is the best tabs component of all I found so far because it is minimal, easy and just works :-)
+
+
 # installation
 
 bower i jquery.tabs
 
 # usage
 
-requirejs supported
+- Nested tabs supported
+- requirejs supported
 
 you can group them any way
 

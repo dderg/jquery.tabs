@@ -26,8 +26,20 @@
 
     class Tabs
         constructor: (@container) ->
-            @controls = @container.find(".tabs__toggle")
-            @tabs = @container.find ".tabs__tab"
+            _ = this;
+            @controls = [];
+            @container.find(".tabs__toggle").each () ->
+                control = this;
+                if $(control).closest('.tabs')[0] == _.container[0]
+                    _.controls.push(control);
+                
+            @tabs = [];
+            @container.find(".tabs__tab").each () ->
+                tab = this;
+                if $(tab).closest('.tabs')[0] == _.container[0]
+                    _.tabs.push(tab);
+                
+
             if @tabs.length != @controls.length
               console.error "there's unmatched tab toggles and tabs"
             @activeClass = "tabs__toggle_active"

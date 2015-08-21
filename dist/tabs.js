@@ -38,9 +38,25 @@
     })();
     Tabs = (function() {
       function Tabs(container) {
+        var _;
         this.container = container;
-        this.controls = this.container.find(".tabs__toggle");
-        this.tabs = this.container.find(".tabs__tab");
+        _ = this;
+        this.controls = [];
+        this.container.find(".tabs__toggle").each(function() {
+          var control;
+          control = this;
+          if ($(control).closest('.tabs')[0] === _.container[0]) {
+            return _.controls.push(control);
+          }
+        });
+        this.tabs = [];
+        this.container.find(".tabs__tab").each(function() {
+          var tab;
+          tab = this;
+          if ($(tab).closest('.tabs')[0] === _.container[0]) {
+            return _.tabs.push(tab);
+          }
+        });
         if (this.tabs.length !== this.controls.length) {
           console.error("there's unmatched tab toggles and tabs");
         }
