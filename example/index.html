@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery.tabs example</title>
+	<style>
+		.tabs__toggle {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 5px 10px;
+			cursor: pointer;
+			border: 1px solid #ccc;
+		}
+		.tabs__toggle_active {
+			cursor: default;
+			border: 1px solid black;
+		}
+		.tabs__tab {
+			padding-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="tabs">
+	    <div class="tabs__toggle tabs__toggle_active">tab1</div>
+	    <div class="tabs__toggle">tab2</div>
+	    <div class="tabs__tab">Tab 1 content</div>
+	    <div class="tabs__tab">Tab 2 content</div>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../dist/tabs.js"></script>
+</body>
+</html>
